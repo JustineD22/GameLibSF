@@ -1,3 +1,20 @@
 body {
-    background-color: lightgray;
+    background-color : pink;
+}
+
+h1 {
+    text-align : center;
+}
+
+a {
+    font-size: 30px;
+    text-decoration: none;
+    display: block; 
+    margin-left: 10px; 
+    color : red;
+}
+
+h2 {
+    margin-left : 40px; 
+    margin-top : 20px;
 }
