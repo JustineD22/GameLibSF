@@ -3,6 +3,8 @@
 namespace App\Form;
 
 use App\Entity\Users;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+// use Doctrine\DBAL\Types\DateType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -23,8 +25,9 @@ class RegistrationFormType extends AbstractType
             ->add('email')
             ->add('Bio')
             ->add('Avatar')
-            ->add('AccountCreation')
-            ->add('AccountValidation')
+            ->add('AccountCreation', DateType::class, [
+                'input'  => 'datetime_immutable'
+            ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
