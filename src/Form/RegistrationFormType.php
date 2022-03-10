@@ -25,9 +25,10 @@ class RegistrationFormType extends AbstractType
             ->add('email')
             ->add('Bio')
             ->add('Avatar')
-            ->add('AccountCreation', DateType::class, [
-                'input'  => 'datetime_immutable'
-            ])
+            // ->add('AccountCreation', DateType::class, [
+            //     'input'  => 'datetime_immutable'
+            // ])
+            // ->add('AccountValidation')
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [

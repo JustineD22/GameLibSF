@@ -16,10 +16,6 @@ class Roles
     #[ORM\Column(type: 'string', length: 255)]
     private $roleName;
 
-    #[ORM\ManyToOne(targetEntity: Users::class, inversedBy: 'id_role')]
-    #[ORM\JoinColumn(nullable: false)]
-    private $users;
-
     public function getId(): ?int
     {
         return $this->id;
